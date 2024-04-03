@@ -6,14 +6,10 @@ public class Maze()
     private bool _fountainFound;
     private bool _enabled;
     int _size;
-    private List<List<Room>> location = new List<List<Room>>();
-    private int _row;
-    private int _column;
-    private int _lastRow;
-    private int _lastColumn;
-
+    private Room _currentRoom;
     private Monster[] monsterList = [];
 
+    public Room CurrentRoom{get => _currentRoom; set => _currentRoom = value;}
     private string[] validDirections = {"move east","move west","move north","move south", "move up","move down", "move right","move left","east","west","north","south","up","down","right","left"};
     public int NumOfRooms{get => _numOfRooms; set => _numOfRooms = value;}
     public bool FountainFound{get => _fountainFound; set => _fountainFound = value;}
@@ -27,67 +23,25 @@ public class Maze()
         get => _size;
         set => _size = value;
     }
-    public int LastRow
-    {
-        get => _lastRow;
-        set => _lastRow = value;
-    }
-    public int LastColumn
-    {
-        get => _lastColumn;
-        set => _lastColumn = value;
-    }
-    public int Row
-    {
-        get => _row;
-        set => _row = value;
-    }
-        public int Column
-    {
-        get => _column;
-        set => _column = value;
-    }
+
     public Maze(int size) : this()
     {
         Enabled = false;
         Size = size;
         if(size == 1)
         {
-            LastColumn = 4;
-            LastRow = 4;
+            Size = 4;
         }
         else if (size == 2)
         {
-            LastColumn = 6;
-            LastRow = 6;
+            Size = 6;
         }
         else if(size ==3)
         {
-            LastColumn =8;
-            LastRow = 8;
+            Size =8;
         }
         CreateMaze();
-        Row = 0;
-        Column = 0;
 
-    }
-
-    public int[] RandEmptyLocation()
-    {
-        int[] x = new int[2] ;
-        Random rnd = new Random();
-        int randRow = rnd.Next(LastRow);
-        int randCol = rnd.Next(LastColumn);
-        if(location[randRow][randCol].isEmpty)
-        {
-            x[0] = randRow;
-            x[1] = randCol;
-            return x;
-        }
-        else
-        {
-            return RandEmptyLocation();
-        }
     }
 
     public void AddRoom(string direction)
@@ -103,15 +57,17 @@ public class Maze()
                 newRoom.Container.Append(monsterList[randMon]);
                 newRoom.isEmpty = false;
             }
-            if(rand.NextDouble()<= .005 && NumOfRooms < LastColumn*LastRow - 3)
+            if(rand.NextDouble()<= .005 && NumOfRooms < Size*Size - 3)
             {
                 newRoom.IsFountain = true;
             }
-            if(NumOfRooms == LastColumn*LastRow -3)
+            if(NumOfRooms == Size*Size -3)
             {
                 newRoom.IsFountain = true;
             }
-            location[Row][Column+1] = newRoom;
+            newRoom.WestR = CurrentRoom;
+            CurrentRoom.EastR = newRoom;
+            CurrentRoom = newRoom;
         }
         
         if(direction == "west")
@@ -125,15 +81,17 @@ public class Maze()
                 newRoom.Container.Append(monsterList[randMon]);
                 newRoom.isEmpty = false;
             }
-            if(rand.NextDouble()<= .005 && NumOfRooms < LastColumn*LastRow - 3)
+            if(rand.NextDouble()<= .005 && NumOfRooms < Size*Size - 3)
             {
                 newRoom.IsFountain = true;
             }
-            if(NumOfRooms == LastColumn*LastRow -3)
+            if(NumOfRooms == Size*Size -3)
             {
                 newRoom.IsFountain = true;
             }
-            location[Row][Column-1] = newRoom;
+            newRoom.EastR = CurrentRoom;
+            CurrentRoom.WestR = newRoom;
+            CurrentRoom = newRoom;
         }
 
         if(direction == "south")
@@ -147,72 +105,69 @@ public class Maze()
                 newRoom.Container.Append(monsterList[randMon]);
                 newRoom.isEmpty = false;
             }
-            if(rand.NextDouble()<= .005 && NumOfRooms < LastColumn*LastRow - 3)
+            if(rand.NextDouble()<= .005 && NumOfRooms < Size*Size - 3)
             {
                 newRoom.IsFountain = true;
             }
-            if(NumOfRooms == LastColumn*LastRow -3)
+            if(NumOfRooms == Size*Size -3)
             {
                 newRoom.IsFountain = true;
             }
-            location[Row-1][Column] = newRoom;
+            newRoom.SouthR = CurrentRoom;
+            CurrentRoom.NorthR = newRoom;
+            CurrentRoom = newRoom;
         }
 
-        if(direction == "north")
+        if(direction == "south")
         {
             Random rand = new Random();
             Room newRoom = new Room();
-            newRoom.South = true;
+            newRoom.North = true;
             if(rand.NextDouble() <= .25)
             {
                 int randMon = rand.Next(monsterList.Length);
                 newRoom.Container.Append(monsterList[randMon]);
                 newRoom.isEmpty = false;
             }
-            if(rand.NextDouble()<= .005 && NumOfRooms < LastColumn*LastRow - 3)
+            if(rand.NextDouble()<= .005 && NumOfRooms < Size*Size - 3)
             {
                 newRoom.IsFountain = true;
             }
-            if(NumOfRooms == LastColumn*LastRow -3)
+            if(NumOfRooms == Size*Size -3)
             {
                 newRoom.IsFountain = true;
             }
-            location[Row+1][Column] = newRoom;
+            newRoom.NorthR = CurrentRoom;
+            CurrentRoom.SouthR = newRoom;
+            CurrentRoom = newRoom;
         }
     }
     public void CreateMaze()
     {
-        for(int x = 0; x < LastColumn; x++)
-        {
-            List<Room> emptyRooms = new List<Room>();
-            for(int k = 0; k < LastRow; k++)
-            {
-                Room newRoom = new Room();
-                emptyRooms.Add(newRoom);
-                
-            }
-            location.Add(emptyRooms);
-        }
+
+        Room startRoom = new Room();
+        startRoom.IsEntrance = true;
+        startRoom.East = true;
+        startRoom.South = true;
+
+        CurrentRoom = startRoom;
 
         Maelstrom mRef1 = new Maelstrom();
         Amarok mRef2 = new Amarok();
         monsterList.Append(mRef1);
         monsterList.Append(mRef2);
 
-        location[0][0].IsEntrance = true;
-        location[0][0].East = true;
-        location[0][0].South = true;
+
     }
     public Room GetRoom()
     {
-        return location[Row][Column];
+        return CurrentRoom;
     }
     public void MoveLeft()
     {
-        if(Column -1 > 0)
+        if(CurrentRoom.West)
         {
             AddRoom("west");
-            Column --;
         }
         else
         {
@@ -221,10 +176,9 @@ public class Maze()
     }
     public void MoveRight()
     {
-        if(Column + 1 < LastColumn -1)
+        if(CurrentRoom.East)
         {
             AddRoom("east");
-            Column ++;
         }
         else
         {
@@ -234,41 +188,18 @@ public class Maze()
     }
     public void MoveUp()
     {
-        if(Row + 1< LastRow -1){AddRoom("north"); Row += 1;}
+        if(CurrentRoom.North){AddRoom("north");}
         else{Console.WriteLine("You hit a wall");}
     }
     public void MoveDown()
     {
 
-        if(Row -1 > 0){AddRoom("south"); Row --;}
+        if(CurrentRoom.South){AddRoom("south");}
         else{Console.WriteLine("You hit a wall");}
     }
     public void PrintMessages()
     {
-        location[Row][Column].PrintMessage();
-    }
-    public string? GetNearRoomMessage()
-    {
-        List<Room> rooms = new List<Room>();
-        if(Row-1 > 0)
-        {
-            rooms.Add(location[Row-1][Column]);
-        }
-        if(Row +1 < LastRow)
-        {
-            rooms.Add(location[Row+1][Column]);
-        }
-        if(Column -1 > 0)
-        {
-            rooms.Add(location[Row][Column -1]);
-        }
-        if(Column +1 < LastColumn)
-        {
-            rooms.Add(location[Row][Column + 1]);
-        }
-        string? returnValue = "";
-        return returnValue;
-
+        
     }
     public bool ValidMove(string x)
     {  
@@ -290,35 +221,19 @@ public class Maze()
             {
                 if(x == "move east" || x == "move right" || x == "east" || x == "right")
                 {
-                    if(location[Row][Column].East)
-                    {
-                        MoveRight();
-                    }
-                    else{Console.WriteLine("You hit a wall");}
+                    MoveRight();
                 }
                 else if(x == "move west"|| x == "move left"|| x == "west" || x == "left")
                 {
-                    if(location[Row][Column].West)
-                    {
-                        MoveLeft();
-                    }
-                    else{Console.WriteLine("You hit a wall");}
+                    MoveLeft();
                 }
                 else if(x == "move north" || x == "move up" || x == "north" || x == "up")
                 {
-                    if(location[Row][Column].North)
-                    {
-                        MoveUp();  
-                    }
-                    else{Console.WriteLine("You hit a wall");}
+                    MoveUp();
                 }
                 else if(x == "move south"|| x == "move down" || x == "south" || x == "down")
                 {
-                    if(location[Row][Column].South)
-                    {
-                        MoveDown();   
-                    }
-                    else{Console.WriteLine("You hit a wall");}   
+                    MoveDown();   
                 }
             }
             else
