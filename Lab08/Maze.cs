@@ -1,5 +1,4 @@
 namespace Lab08;
-
 public class Maze()
 {  
     private int _numOfRooms;
@@ -44,7 +43,7 @@ public class Maze()
 
     }
 
-    public void AddRoom(string direction)
+    public string AddRoom(string direction)
     {
         if(direction == "east")
         {
@@ -68,6 +67,7 @@ public class Maze()
             newRoom.WestR = CurrentRoom;
             CurrentRoom.EastR = newRoom;
             CurrentRoom = newRoom;
+            
         }
         
         if(direction == "west")
@@ -131,16 +131,20 @@ public class Maze()
             }
             if(rand.NextDouble()<= .005 && NumOfRooms < Size*Size - 3)
             {
+                newRoom.isEmpty = false;
                 newRoom.IsFountain = true;
             }
             if(NumOfRooms == Size*Size -3)
             {
+                newRoom.isEmpty = false;
                 newRoom.IsFountain = true;
             }
             newRoom.NorthR = CurrentRoom;
             CurrentRoom.SouthR = newRoom;
             CurrentRoom = newRoom;
+            
         }
+        return CurrentRoom.printRoom();
     }
     public void CreateMaze()
     {
@@ -159,43 +163,46 @@ public class Maze()
 
 
     }
-    public Room GetRoom()
+    public string MoveLeft()
     {
-        return CurrentRoom;
-    }
-    public void MoveLeft()
-    {
+        string x = "null";
         if(CurrentRoom.West)
         {
-            AddRoom("west");
+            x=AddRoom("west");
         }
         else
         {
             Console.WriteLine("You hit a wall.");
         }
+        return x;
     }
-    public void MoveRight()
+    public string MoveRight()
     {
+        string x = "null";
         if(CurrentRoom.East)
         {
-            AddRoom("east");
+            x=AddRoom("east");
         }
         else
         {
             Console.WriteLine("You hit a wall.");
         }
-        
+        return x;
     }
-    public void MoveUp()
+    public string MoveUp()
     {
-        if(CurrentRoom.North){AddRoom("north");}
+        string x = "null";
+        if(CurrentRoom.North){x=AddRoom("north");}
         else{Console.WriteLine("You hit a wall");}
+        return x;
     }
-    public void MoveDown()
+    public string MoveDown()
     {
+        string x = "null";
+        if(CurrentRoom.South){x = AddRoom("south");}
+        else{Console.WriteLine("You hit a wall");}
+        return x;
 
-        if(CurrentRoom.South){AddRoom("south");}
-        else{Console.WriteLine("You hit a wall");}
     }
     public void PrintMessages()
     {
@@ -212,7 +219,7 @@ public class Maze()
             return false;
         }
     }
-    public void Move(string x)
+    public string[] Move(string x)
     {
 
         if(x != null)
@@ -221,24 +228,29 @@ public class Maze()
             {
                 if(x == "move east" || x == "move right" || x == "east" || x == "right")
                 {
-                    MoveRight();
+                    
+                    return ["east",MoveRight()];
                 }
                 else if(x == "move west"|| x == "move left"|| x == "west" || x == "left")
                 {
-                    MoveLeft();
+                    
+                    return ["west",MoveLeft()];
                 }
                 else if(x == "move north" || x == "move up" || x == "north" || x == "up")
                 {
-                    MoveUp();
+                    
+                    return ["north",MoveUp()];
                 }
                 else if(x == "move south"|| x == "move down" || x == "south" || x == "down")
                 {
-                    MoveDown();   
+                    
+                    return ["south",MoveDown()]; 
                 }
             }
             else
             {
                 Console.WriteLine("That is not a valid move direction");
+                return ["null"];
             }
 
 
@@ -246,11 +258,32 @@ public class Maze()
         else
         {
             Console.WriteLine("You did not move as you didn't enter anything");
+            return ["null"];
         }
+        return ["null"];
     }
     public void checkRoom()
     {
-        Room x = GetRoom();
+        CurrentRoom.PrintMessage();
+        if(CurrentRoom.isEmpty)
+        {
+
+        }
+        else if(CurrentRoom.IsEntrance)
+        {
+
+        }
+        else if(CurrentRoom.IsFountain)
+        {
+
+        }
+        else
+        {
+            foreach(Monster a in CurrentRoom.Container)
+            {
+                
+            }
+        }
     }
    
    

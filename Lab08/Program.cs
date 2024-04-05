@@ -1,5 +1,5 @@
 ﻿namespace Lab08;
-public partial class Program
+public partial class ProgramTest
 {
     public bool ValidSizeInput(string x)
     {  
@@ -38,7 +38,7 @@ public partial class Program
         }
         return 0;
     }
-    public void Run(int size)
+    public string[] Run(int size)
     {
         Maze mainMaze = new Maze(size);
         bool play = true;
@@ -48,11 +48,13 @@ public partial class Program
             mainMaze.PrintMessages();
             Console.WriteLine("Where would you like to move?");
             string? move = Console.ReadLine();
-            mainMaze.Move(move);
-            mainMaze.checkRoom();
+            return mainMaze.Move(move);
+            
         }
+        mainMaze.checkRoom();
+        return ["null"];
     }
-    public void Main()
+    public int Main()
     {
         int tSize = 1;
         bool makeSize = true;
@@ -70,7 +72,6 @@ public partial class Program
                 makeSize = false;
             }
         }
-        Run(tSize);
-       
+       return tSize;
     }
 }

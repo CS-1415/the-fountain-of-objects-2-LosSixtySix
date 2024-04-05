@@ -1,10 +1,7 @@
 ﻿using Lab08;
-Items testItem = new Items();
-
-Maelstrom y = new Maelstrom();
-y.Inventory[0].WhatIsMyItem();
-testItem = y.Attack();
-Console.WriteLine(testItem.WhatIsMyItem());
+Room testRoom = new Room();
+string test = testRoom.printRoom();
+Console.WriteLine(test);
 
 Lab08.Program x = new Lab08.Program();
 

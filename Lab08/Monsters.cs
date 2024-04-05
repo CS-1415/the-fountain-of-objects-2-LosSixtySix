@@ -15,6 +15,10 @@ public class Monster
     {
         return Inventory;
     }
+    public void DisplaySelf()
+    {
+        
+    }
     public Items Attack()
     {
         int selectionNum = 0;
