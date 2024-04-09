@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1038" Width="956">
+    <Grid x:Name="grid1" Margin="0,0,0,-6" Background="Black">
+
+        <Button x:Name ="button1" Content="Start" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Click="takeInput1" Height="20" Width="28" Foreground="LightSeaGreen" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF09330A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF5FEA87" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <TextBox x:Name="Log" ScrollBar.Scroll="Log_Scroll"   IsReadOnly="True" FontFamily="Consolas" HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Height="560" RenderTransformOrigin="0.523,0.492" Background="{x:Null}" SelectionBrush="White" BorderBrush="LightSeaGreen" SelectionTextBrush="#FF31BB00" Foreground="LightSeaGreen"/>
+        <TextBox x:Name ="input1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Enter the size and press start" VerticalAlignment="Top" Width="162" Margin="0,10,0,0" Height="18" Foreground="LightSeaGreen" Background="{x:Null}" BorderBrush="LightSeaGreen" Grid.Column="1"/>
+        <TextBox x:Name="input2"  KeyDown="input2_KeyDown" HorizontalAlignment="Left" Margin="10,623,0,0" TextWrapping="Wrap" Text="type here" VerticalAlignment="Top" Width="153" Height="25" Background="{x:Null}" BorderBrush="LightSeaGreen" Foreground="LightSeaGreen"/>
+        <Label x:Name="location" Foreground="LightSeaGreen" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="40" Height="35"/>
+        <TextBox x:Name="inventory" ScrollBar.Scroll="Log_Scroll"   IsReadOnly="True" FontFamily="Consolas" HorizontalAlignment="Center" Margin="0,623,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="620" Height="115" RenderTransformOrigin="0.523,0.492" Background="{x:Null}" SelectionBrush="White" BorderBrush="LightSeaGreen" SelectionTextBrush="#FF31BB00" Foreground="LightSeaGreen"/>
+        <TextBox x:Name="statistics" ScrollBar.Scroll="Log_Scroll"   IsReadOnly="True" FontFamily="Consolas" HorizontalAlignment="Center" Margin="0,743,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="620" Height="115" RenderTransformOrigin="0.523,0.492" Background="{x:Null}" SelectionBrush="White" BorderBrush="LightSeaGreen" SelectionTextBrush="#FF31BB00" Foreground="LightSeaGreen"/>
+        <Rectangle HorizontalAlignment="Center" Height="560" Margin="0,58,0,0" Stroke="LightSeaGreen" VerticalAlignment="Top" Width="620"/>
+
+
+
+    </Grid>
+</Window>

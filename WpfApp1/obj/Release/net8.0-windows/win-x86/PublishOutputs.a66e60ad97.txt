@@ -1,0 +1,7 @@
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\WpfApp1.pdb
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\D3DCompiler_47_cor3.dll
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\PenImc_cor3.dll
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\PresentationNative_cor3.dll
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\vcruntime140_cor3.dll
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\wpfgfx_cor3.dll
+C:\Users\Lanu\source\repos\WpfApp1\WpfApp1\WpfApp1.exe

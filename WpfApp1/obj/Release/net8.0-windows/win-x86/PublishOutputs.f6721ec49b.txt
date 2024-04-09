@@ -1,0 +1,7 @@
+C:\Users\Lanu\Desktop\Lab08Test\WpfApp1.pdb
+C:\Users\Lanu\Desktop\Lab08Test\D3DCompiler_47_cor3.dll
+C:\Users\Lanu\Desktop\Lab08Test\PenImc_cor3.dll
+C:\Users\Lanu\Desktop\Lab08Test\PresentationNative_cor3.dll
+C:\Users\Lanu\Desktop\Lab08Test\vcruntime140_cor3.dll
+C:\Users\Lanu\Desktop\Lab08Test\wpfgfx_cor3.dll
+C:\Users\Lanu\Desktop\Lab08Test\WpfApp1.exe

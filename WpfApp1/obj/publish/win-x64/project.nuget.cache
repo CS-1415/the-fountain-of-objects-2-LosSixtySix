@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "RPjAK/Fd83YQBKv96U3dp9n27vFU8LbIxrnnVEIWWq98KAxFOQHLUC1DL0hEVGX73TV2hL/yOufAUaqZIkN3ig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lanu\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
+    "C:\\Users\\Lanu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.3\\microsoft.netcore.app.runtime.win-x64.8.0.3.nupkg.sha512",
+    "C:\\Users\\Lanu\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.3.nupkg.sha512",
+    "C:\\Users\\Lanu\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.3\\microsoft.aspnetcore.app.runtime.win-x64.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

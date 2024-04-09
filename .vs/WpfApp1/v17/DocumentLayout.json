@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\monsters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\monsters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|c:\\users\\lanu\\source\\repos\\wpfapp1\\wpfapp1\\room.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{051B258C-23F5-4D09-9EDA-3FA1A1E2C9E5}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\room.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Maze.cs",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Maze.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Maze.cs",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Maze.cs",
+              "RelativeToolTip": "WpfApp1\\Maze.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:20:26.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Room.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Room.cs",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Room.cs",
+              "RelativeToolTip": "WpfApp1\\Room.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAgwFYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:13:41.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Monsters.cs",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Monsters.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Monsters.cs",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Monsters.cs",
+              "RelativeToolTip": "WpfApp1\\Monsters.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAuwCcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:12:51.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Items.cs",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Items.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Items.cs",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Items.cs",
+              "RelativeToolTip": "WpfApp1\\Items.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAF4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:14:48.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Room.txt",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Room.txt",
+              "RelativeDocumentMoniker": "WpfApp1\\Room.txt",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\Room.txt",
+              "RelativeToolTip": "WpfApp1\\Room.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-07T20:17:19.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-04T16:14:47.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Lanu\\source\\repos\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAMwAAAAAAAAAAAAIwOcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T16:14:43.734Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
